@@ -1,5 +1,6 @@
 from pywinauto import application
 from config import CHAT_ROOM_NAME
+from pywinauto import keyboard
 
 
 def send_message_to_chat(message):
@@ -15,8 +16,14 @@ def send_message_to_chat(message):
         dlg = app.window(title_re=CHAT_ROOM_NAME)
 
         # 메시지 입력 및 전송
-        dlg['Document'].type_keys(message)
-        dlg['Document'].type_keys('{ENTER}')  # 엔터 키로 메시지 전송
+        lines = message.split('\n')
+
+        for i, line in enumerate(lines):
+            dlg['Document'].type_keys(line)
+            if i < len(lines) -1:
+                keyboard.send_keys('+{ENTER}')
+            else:
+                keyboard.send_keys('{ENTER}')
         print("메시지가 채팅창에 전송되었습니다:", message)
 
     except Exception as e:

@@ -29,10 +29,10 @@ def handle_webhook():
             if len(description) > max_description_length:
                 description = description[:max_description_length] + "..."
 
-            message = f"**{author_name}**\n" \
-                f"**{title}**\n" \
-                f"{url}\n\n" \
-                f"{description}"
+            message = f"{title}\n\n" \
+                f"{description}\n\n"\
+                f"{url}" 
+
 
             print("수신된 embed 메시지:", message)
             send_message_to_chat(message)
