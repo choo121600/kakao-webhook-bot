@@ -1,0 +1,26 @@
+{
+	"username": "Webhook",
+	"avatar_url": "https://discourse.airflow-kr.org/choo121600/45/7_2.png",
+	"content": "test messageeeeeees",
+	"embeds": [
+		{
+			"author": {
+				"name": "@choo121600",
+				"url": "https://discourse.airflow-kr.org/choo121600/45/7_2.png",
+				"icon_url": "https://discourse.airflow-kr.org/choo121600/45/7_2.png"
+			},
+			"title": "Airflow 3.0 AIP로 미리보기 [정보공유] airflow",
+			"url": "https://discourse.airflow-kr.org/t/airflow-3-0-aip/292",
+			"description": "Airflow 3.0이 내년 3월 말에 출시됩니다 :tada: 아마 많은 Airflow 사용자분들이 이 버전을 기대하고 계실 것으로 예상되는데요. 저도 어떤 변화가 있을지 기대하고 있습니다 :grinning: Airflow는 오픈 소스 프로젝트로, AIP(Airflow Improvement Proposal) 로 관리됩니다. AIP는 새로운 기능, 구조적 변경, 프로젝트 비전을 논의하는 플랫폼으로, Airflow가 앞으로 어떤 미래를 그리고 있는지 확인할 수 있습니다. 그래서 이번 글에서는 Airflow 3.0에 도입될 주요 AIP들을 보며 Airflow3.0에 어떤 변화들이 있을지에 대해 알아보겠습니다.",
+			"color": 15258703,
+			"fields": [
+			],
+			"thumbnail": {
+			},
+			"image": {
+			},
+			"footer": {
+			}
+		}
+	]
+}

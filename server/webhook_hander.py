@@ -17,14 +17,27 @@ def handle_webhook():
             file.write(json_data + "\n\n")
         print("웹훅 데이터가 저장되었습니다!")
 
-        if "content" in data:
-            message = data["content"]
-            print("수신된 메시지:", message)
+        if "embeds" in data and len(data["embeds"]) > 0:
+            embed = data["embeds"][0]  # 첫 번째 embed만 처리 (필요시 수정 가능)
 
-            # 채팅방에 메시지 전송
+            author_name = embed.get('author', {}).get('name', 'Unknown Author')
+            title = embed.get('title', 'No Title')
+            url = embed.get('url', '')
+            description = embed.get('description', '')
+
+            max_description_length = 100
+            if len(description) > max_description_length:
+                description = description[:max_description_length] + "..."
+
+            message = f"**{author_name}**\n" \
+                f"**{title}**\n" \
+                f"{url}\n\n" \
+                f"{description}"
+
+            print("수신된 embed 메시지:", message)
             send_message_to_chat(message)
         else:
-            print("content가 없습니다. 메시지를 전송하지 않습니다.")
+            print("webhook에 데이터가 없습니다. 메시지를 전송하지 않습니다.")
 
         return jsonify({"message": "웹훅 데이터 수신 및 처리 완료"}), 200
 
