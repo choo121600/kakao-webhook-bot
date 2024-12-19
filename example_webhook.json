@@ -1,26 +1,16 @@
 {
-	"username": "Webhook",
-	"avatar_url": "https://discourse.airflow-kr.org/choo121600/45/7_2.png",
-	"content": "test messageeeeeees",
-	"embeds": [
-		{
-			"author": {
-				"name": "@choo121600",
-				"url": "https://discourse.airflow-kr.org/choo121600/45/7_2.png",
-				"icon_url": "https://discourse.airflow-kr.org/choo121600/45/7_2.png"
-			},
-			"title": "Airflow 3.0 AIP로 미리보기 [정보공유] airflow",
-			"url": "https://discourse.airflow-kr.org/t/airflow-3-0-aip/292",
-			"description": "Airflow 3.0이 내년 3월 말에 출시됩니다 :tada: 아마 많은 Airflow 사용자분들이 이 버전을 기대하고 계실 것으로 예상되는데요. 저도 어떤 변화가 있을지 기대하고 있습니다 :grinning: Airflow는 오픈 소스 프로젝트로, AIP(Airflow Improvement Proposal) 로 관리됩니다. AIP는 새로운 기능, 구조적 변경, 프로젝트 비전을 논의하는 플랫폼으로, Airflow가 앞으로 어떤 미래를 그리고 있는지 확인할 수 있습니다. 그래서 이번 글에서는 Airflow 3.0에 도입될 주요 AIP들을 보며 Airflow3.0에 어떤 변화들이 있을지에 대해 알아보겠습니다.",
-			"color": 15258703,
-			"fields": [
-			],
-			"thumbnail": {
-			},
-			"image": {
-			},
-			"footer": {
-			}
-		}
-	]
+    "content": "",
+    "embeds": [
+        {
+            "title": "[Astronomer Docs] Airflow 퀵스타트 [문서] astronomer",
+            "color": 16225309,
+            "description": "Airflow 퀵스타트\nAirflow의 기능과 사용 사례를 알아보는 가장 좋은 방법은 Astronomer의 Airflow 퀵스타트를 사용하는 것입니다. \n이 퀵스타트는 Airflow, DuckDB, Streamlit, Astro Python SDK 등의 오픈 소스 도구를 사용하여 시간에 따른 전 세계 및 지역 온도 변화를 보여주는 대화형 대시보드를 생성하는 ELT 파이프라인을 구현합니다. \n [Quickstart] \nGitHub Codespaces를 사용하면 로컬에 아무것도 설치하지 않고도 빠른 시작을 실행할 수 있고, Astro CLI를 사용하여 로컬에서 실행할 수도 있습니다. \n이 프로젝트는 Airflow가 무엇을 할 수 있는지 보여주고 중요한 Airflow 개념을 탐색할 수 있는 샌드박스를 제공하도록 ...",
+            "url": "https://discourse.airflow-kr.org/t/astronomer-docs-airflow/257/1",
+            "author": {
+                "name": "@choo121600 (Yeonguk Choo)",
+                "url": "https://discourse.airflow-kr.org/u/choo121600",
+                "icon_url": "https://discourse.airflow-kr.org/user_avatar/discourse.airflow-kr.org/choo121600/45/7_2.png"
+            }
+        }
+    ]
 }
