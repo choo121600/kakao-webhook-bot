@@ -19,7 +19,7 @@ def send_message_to_chat(message):
         lines = message.split('\n')
 
         for i, line in enumerate(lines):
-            dlg['Document'].type_keys(line)
+            dlg['Document'].type_keys(line, with_spaces=True)
             if i < len(lines) -1:
                 keyboard.send_keys('+{ENTER}')
             else:
