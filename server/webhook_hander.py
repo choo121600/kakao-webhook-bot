@@ -1,6 +1,5 @@
 from flask import request, jsonify
 import json
-from config import TEXT_FILE
 from chat.chat_sender import send_message_to_chat
 
 
@@ -10,12 +9,6 @@ def handle_webhook():
     """
     try:
         data = request.json
-
-        # 데이터를 파일에 저장
-        with open(TEXT_FILE, "a", encoding="utf-8") as file:
-            json_data = json.dumps(data, indent=4, ensure_ascii=False)
-            file.write(json_data + "\n\n")
-        print("웹훅 데이터가 저장되었습니다!")
 
         if "embeds" in data and len(data["embeds"]) > 0:
             embed = data["embeds"][0]  # 첫 번째 embed만 처리 (필요시 수정 가능)
