@@ -8,7 +8,7 @@ def test_handle_webhook_with_example_file():
     example_webhook.json 파일을 읽고 handle_webhook 함수의 로직을 모방하여 메시지를 전송하는 테스트 함수
     """
     try:
-        with open('../example_webhook.json', 'r', encoding='utf-8') as f:
+        with open('./example_webhook.json', 'r', encoding='utf-8') as f:
             data = json.load(f)
 
         if "embeds" in data and len(data["embeds"]) > 0:
