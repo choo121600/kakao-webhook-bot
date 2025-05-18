@@ -38,3 +38,7 @@ def test_handle_webhook_with_example_file():
             "error": "서버 오류",
             "exception": str(e)
         }), 500
+
+
+if __name__ == '__main__':
+    test_handle_webhook_with_example_file()
