@@ -1,6 +1,19 @@
 from flask import request, jsonify
 import json
+import re
 from chat.chat_sender import send_message_to_chat
+
+
+def clean_markdown(description: str) -> str:
+    """
+    마크다운 링크와 불완전한 마크다운 링크를 제거하는 함수
+    """
+    description = re.sub(r'\[[^\]]*\]\([^)]+\)', '', description)
+
+    description = re.sub(r'\[[^\]]*\]\([^\)]*$', '', description)
+    description = re.sub(r'\[[^\]]*$', '', description)
+
+    return description
 
 
 def handle_webhook():
@@ -11,12 +24,14 @@ def handle_webhook():
         data = request.json
 
         if "embeds" in data and len(data["embeds"]) > 0:
-            embed = data["embeds"][0]  # 첫 번째 embed만 처리 (필요시 수정 가능)
+            embed = data["embeds"][0]  # 첫 번째 embed만 처리
 
             author_name = embed.get('author', {}).get('name', 'Unknown Author')
             title = embed.get('title', 'No Title')
             url = embed.get('url', '')
             description = embed.get('description', '')
+
+            description = clean_markdown(description)
 
             max_description_length = 100
             if len(description) > max_description_length:
@@ -35,7 +50,7 @@ def handle_webhook():
         return jsonify({"message": "웹훅 데이터 수신 및 처리 완료"}), 200
 
     except Exception as e:
-        print("웹훅 처리 중 오류 발생:")
+        print("웹훅 처리 중 오류 발생:", e)
         return jsonify({
             "error": "서버 오류",
             "exception": str(e)
