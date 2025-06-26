@@ -1,5 +1,5 @@
 from flask import Flask
-from server.webhook_hander import handle_webhook
+from server.webhook_handler import handle_webhook
 
 app = Flask(__name__)
 

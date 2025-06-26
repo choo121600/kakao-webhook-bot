@@ -60,4 +60,4 @@ def handle_webhook():
         return jsonify({
             "error": "서버 오류",
             "exception": str(e)
-        }), 500
+        }), 500 
